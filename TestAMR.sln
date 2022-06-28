@@ -5,11 +5,15 @@ VisualStudioVersion = 17.2.32616.157
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "AngularFrontend", "AngularFrontend\AngularFrontend.esproj", "{967CD69E-A971-4271-A05D-DF142DE7E362}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASP.NetWebAPI", "ASP.NetWebAPI\ASP.NetWebAPI.csproj", "{B817FC3A-C6D6-4BEE-88A3-A3240F52538E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ASP.NetWebAPI", "ASP.NetWebAPI\ASP.NetWebAPI.csproj", "{B817FC3A-C6D6-4BEE-88A3-A3240F52538E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{50926E4E-84CB-407A-A1D5-1B56A7AA57C0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Domain\Domain.csproj", "{50926E4E-84CB-407A-A1D5-1B56A7AA57C0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "UnitTests\UnitTests.csproj", "{0F0C1D1C-E382-42BD-B817-F406C5DD0780}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTests", "UnitTests\UnitTests.csproj", "{0F0C1D1C-E382-42BD-B817-F406C5DD0780}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\DataAccess.csproj", "{53874598-B91F-42A4-AD6E-EB8CB03E657E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Abstractions", "Interfaces\Abstractions.csproj", "{C807BF62-06B6-4CE9-8313-84575496D37E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,6 +39,14 @@ Global
 		{0F0C1D1C-E382-42BD-B817-F406C5DD0780}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0F0C1D1C-E382-42BD-B817-F406C5DD0780}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0F0C1D1C-E382-42BD-B817-F406C5DD0780}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53874598-B91F-42A4-AD6E-EB8CB03E657E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53874598-B91F-42A4-AD6E-EB8CB03E657E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53874598-B91F-42A4-AD6E-EB8CB03E657E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53874598-B91F-42A4-AD6E-EB8CB03E657E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C807BF62-06B6-4CE9-8313-84575496D37E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C807BF62-06B6-4CE9-8313-84575496D37E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C807BF62-06B6-4CE9-8313-84575496D37E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C807BF62-06B6-4CE9-8313-84575496D37E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
