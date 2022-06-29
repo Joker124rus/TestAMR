@@ -11,17 +11,17 @@ public class Product
     public int Id { get; set; }
 
     /// <summary>
-    /// Name.
+    /// Russian name.
     /// </summary>
-    public string Name { get; init; }
+    public string RussianName { get; init; }
 
     /// <summary>
-    /// Original name.
+    /// Official non-japanese name.
     /// </summary>
     public string OriginalName { get; init; }
 
     /// <summary>
-    /// Japanese name.
+    /// Official japanese name.
     /// </summary>
     public string JapaneseName { get; init; }
 
