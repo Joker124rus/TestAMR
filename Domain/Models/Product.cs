@@ -1,4 +1,6 @@
-﻿namespace Domain.Models;
+﻿using Domain.Dtos;
+
+namespace Domain.Models;
 
 /// <summary>
 /// Product.
@@ -30,6 +32,6 @@ public class Product
     /// </summary>
     public string? Description { get; init; }
 
-    /// <inheritdoc cref="Models.Type"/>
-    public Type? Type { get; init; }
+    /// <inheritdoc cref="Models.ProductType"/>
+    public ProductTypeDto? ProductType { get; init; }
 }

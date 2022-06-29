@@ -1,4 +1,5 @@
-﻿using Domain.Models;
+﻿using Domain.Dtos;
+using Domain.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace Abstractions.DataAccess;
@@ -11,5 +12,10 @@ public interface IApplicationContext
     /// <summary>
     /// Data base set that represents products.
     /// </summary>
-    DbSet<Product> Products { get; init; }
+    DbSet<Product> Products { get; }
+
+    /// <summary>
+    /// Data base set that represents products types.
+    /// </summary>
+    DbSet<ProductTypeDto> ProductTypes { get; }
 }

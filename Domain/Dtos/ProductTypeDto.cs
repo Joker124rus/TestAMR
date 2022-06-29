@@ -1,14 +1,16 @@
-﻿namespace Domain.Models;
+﻿using Domain.Models;
+
+namespace Domain.Dtos;
 
 /// <summary>
-/// Product type.
+/// Product type DTO.
 /// </summary>
-public class Type
+public class ProductTypeDto
 {
     /// <summary>
     /// Identifier.
     /// </summary>
-    public int Id { get; init; }
+    public ProductType Id { get; init; }
 
     /// <summary>
     /// Type name.
