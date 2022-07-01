@@ -2,6 +2,7 @@
 using Domain.Dtos;
 using Domain.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Infrastructure;
 
 namespace DataAccess;
 
@@ -24,9 +25,11 @@ public class ApplicationContext : DbContext, IApplicationContext
     /// <inheritdoc />
     public DbSet<ProductTypeDto> ProductTypes { get; protected set; }
 
+    /// <inheritdoc />
+    public DbSet<ProductStatusDto> ProductStatuses { get; protected set; }
+
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        // Seed database with all Colors
         foreach (var productType in Enum.GetValues(typeof(ProductType)).Cast<ProductType>())
         {
             var productTypeDto = new ProductTypeDto
@@ -36,6 +39,17 @@ public class ApplicationContext : DbContext, IApplicationContext
             };
 
             modelBuilder.Entity<ProductTypeDto>().HasData(productTypeDto);
+        }
+
+        foreach (var productStatus in Enum.GetValues(typeof(ProductStatus)).Cast<ProductStatus>())
+        {
+            var productStatusDto = new ProductStatusDto
+            {
+                Id = productStatus,
+                Name = productStatus.ToString(),
+            };
+
+            modelBuilder.Entity<ProductStatusDto>().HasData(productStatusDto);
         }
     }
 }

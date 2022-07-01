@@ -29,8 +29,9 @@ public class ProductController : ControllerBase
     /// <returns>IEnumerable with animes.</returns>
     [HttpGet]
     [Produces("application/json")]
-    public async Task<IEnumerable<Product>> GetAnimes()
+    public async Task<IEnumerable<Product>> GetProductsAsync([FromQuery] GetProductsQuery query)
     {
-        return await mediator.Send(new GetProductsQuery(ProductType.Anime));
+        //return await mediator.Send(new GetProductsQuery(productType));
+        return await mediator.Send(query);
     }
 }

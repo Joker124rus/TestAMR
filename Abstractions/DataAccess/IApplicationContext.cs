@@ -15,7 +15,12 @@ public interface IApplicationContext
     DbSet<Product> Products { get; }
 
     /// <summary>
-    /// Data base set that represents products types.
+    /// Product types.
     /// </summary>
     DbSet<ProductTypeDto> ProductTypes { get; }
+
+    /// <summary>
+    /// Product statuses.
+    /// </summary>
+    DbSet<ProductStatusDto> ProductStatuses { get; }
 }

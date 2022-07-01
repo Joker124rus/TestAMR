@@ -5,11 +5,11 @@ using UseCases.Products;
 namespace UnitTests;
 
 [TestClass]
-public class AnimesTests
+public class ProductTests
 {
 
     [TestMethod]
-    public void GetAnimesTestShouldBe2()
+    public void GetProductsTestShouldBe2()
     {
         // Arrange
         var fixture = new TestDatabaseFixture();

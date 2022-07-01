@@ -25,6 +25,6 @@ public class GetProductsQueryHandler : IRequestHandler<GetProductsQuery, IEnumer
     {
         return db.Products
             .Include(product => product.ProductType)
-            .Where(product => product.ProductType!.Id == request.Type);
+            .Where(product => product.ProductType!.Id == request.ProductType);
     }
 }
