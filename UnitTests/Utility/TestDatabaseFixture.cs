@@ -21,18 +21,18 @@ public class TestDatabaseFixture
                     context.Database.EnsureDeleted();
                     context.Database.EnsureCreated();
 
-                    context.Products.AddRange(
-                        new Product
+                    context.Ranobes.AddRange(
+                        new Ranobe
                         {
                             RussianName = "Тетрадь смерти",
-                            OriginalName = "Death Note",
-                            ProductType = context.ProductTypes.First(type => type.Id == ProductType.Anime)
+                            EnglishName = "Death Note",
+                            Status = context.Statuses.First(status => status.Id == Status.OnGoing)
                         },
-                        new Product
+                        new Ranobe
                         {
                             RussianName = "Стальной алхимик",
-                            OriginalName = "Fullmetal alchemist",
-                            ProductType = context.ProductTypes.First(type => type.Id == ProductType.Anime)
+                            EnglishName = "Fullmetal alchemist",
+                            Status = context.Statuses.First(status => status.Id == Status.Complete)
                         });
                     context.SaveChanges();
                 }

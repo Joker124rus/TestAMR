@@ -1,32 +1,32 @@
 ﻿namespace Domain.Models;
 
 /// <summary>
-/// Product status.
+/// Ranobe status.
 /// </summary>
-public enum ProductStatus
+public enum Status
 {
     /// <summary>
-    /// Work on product is underway.
+    /// Work on ranobe is underway.
     /// </summary>
     OnGoing = 1,
 
     /// <summary>
-    /// Product is completed.
+    /// Ranobe is completed.
     /// </summary>
     Complete = 2,
 
     /// <summary>
-    /// Product is announced.
+    /// Ranobe is announced.
     /// </summary>
     Announce = 3,
 
     /// <summary>
-    /// Work on product is temporarily cancelled.
+    /// Work on Ranobe is temporarily cancelled.
     /// </summary>
     Freeze = 4,
 
     /// <summary>
-    /// Product is cancelled.
+    /// Ranobe is cancelled.
     /// </summary>
     Deny = 5
 }

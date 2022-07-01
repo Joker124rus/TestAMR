@@ -4,7 +4,7 @@ using DataAccess;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
-using UseCases.Products;
+using UseCases.Ranobes;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -27,7 +27,7 @@ var connection = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDbContext<ApplicationContext>(options => options.UseSqlServer(connection));
 builder.Services.AddTransient<IApplicationContext, ApplicationContext>();
 
-builder.Services.AddMediatR(typeof(GetProductsQuery).Assembly);
+builder.Services.AddMediatR(typeof(GetRanobesQuery).Assembly);
 
 var app = builder.Build();
 

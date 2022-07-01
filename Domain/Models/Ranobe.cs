@@ -4,9 +4,9 @@ using Domain.Dtos;
 namespace Domain.Models;
 
 /// <summary>
-/// Product.
+/// Ranobe.
 /// </summary>
-public class Product
+public class Ranobe
 {
     /// <summary>
     /// Identifier.
@@ -21,40 +21,33 @@ public class Product
     public string? RussianName { get; init; }
 
     /// <summary>
-    /// Official non-japanese name.
+    /// English name.
     /// </summary>
     [StringLength(300)]
-    public string? OriginalName { get; init; }
+    public string? EnglishName { get; init; }
 
     /// <summary>
-    /// Official japanese name.
+    /// Official foreign name.
     /// </summary>
     [StringLength(300)]
-    public string? JapaneseName { get; init; }
+    public string? ForeignName { get; init; }
 
     /// <summary>
     /// Description.
     /// </summary>
     public string? Description { get; init; }
 
-    /// <inheritdoc cref="Models.ProductType"/>
-    [Required]
-    public ProductTypeDto? ProductType { get; init; }
-
     /// <summary>
     /// Total count episodes.
     /// </summary>
-    public int? CountEpisodes { get; init; }
+    public int? ChaptersCount { get; init; }
 
     /// <summary>
-    /// Date when product published. This represents date of first episode. 
+    /// Date when ranobe is published. This represents date of first chapter. 
     /// </summary>
     public DateTime? PublishDate { get; init; }
 
-    /// <inheritdoc cref="Models.ProductStatus"/>
+    /// <inheritdoc cref="Models.Status"/>
     [Required]
-    public ProductStatusDto? ProductStatus { get; init; }
-
-
-
+    public StatusDto? Status { get; init; }
 }

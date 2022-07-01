@@ -2,7 +2,6 @@
 using Domain.Dtos;
 using Domain.Models;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Infrastructure;
 
 namespace DataAccess;
 
@@ -20,36 +19,22 @@ public class ApplicationContext : DbContext, IApplicationContext
     }
 
     /// <inheritdoc />
-    public DbSet<Product> Products { get; protected set; }
+    public DbSet<Ranobe> Ranobes { get; protected set; }
 
     /// <inheritdoc />
-    public DbSet<ProductTypeDto> ProductTypes { get; protected set; }
-
-    /// <inheritdoc />
-    public DbSet<ProductStatusDto> ProductStatuses { get; protected set; }
+    public DbSet<StatusDto> Statuses { get; protected set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        foreach (var productType in Enum.GetValues(typeof(ProductType)).Cast<ProductType>())
+        foreach (var status in Enum.GetValues(typeof(Status)).Cast<Status>())
         {
-            var productTypeDto = new ProductTypeDto
+            var statusDto = new StatusDto
             {
-                Id = productType,
-                Name = productType.ToString(),
+                Id = status,
+                Name = status.ToString(),
             };
 
-            modelBuilder.Entity<ProductTypeDto>().HasData(productTypeDto);
-        }
-
-        foreach (var productStatus in Enum.GetValues(typeof(ProductStatus)).Cast<ProductStatus>())
-        {
-            var productStatusDto = new ProductStatusDto
-            {
-                Id = productStatus,
-                Name = productStatus.ToString(),
-            };
-
-            modelBuilder.Entity<ProductStatusDto>().HasData(productStatusDto);
+            modelBuilder.Entity<StatusDto>().HasData(statusDto);
         }
     }
 }

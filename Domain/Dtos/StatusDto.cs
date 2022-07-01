@@ -1,17 +1,16 @@
-﻿using System.ComponentModel.DataAnnotations;
-using Domain.Models;
+﻿using Domain.Models;
 
 namespace Domain.Dtos;
 
 /// <summary>
-/// Product status DTO.
+/// Status DTO.
 /// </summary>
-public class ProductStatusDto
+public class StatusDto
 {
     /// <summary>
     /// Identifier.
     /// </summary>
-    public ProductStatus Id { get; init; }
+    public Status Id { get; init; }
 
     /// <summary>
     /// Status name.

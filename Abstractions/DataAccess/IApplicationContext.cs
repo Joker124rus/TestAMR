@@ -10,17 +10,12 @@ namespace Abstractions.DataAccess;
 public interface IApplicationContext
 {
     /// <summary>
-    /// Data base set that represents products.
+    /// Data base set that represents ranobes.
     /// </summary>
-    DbSet<Product> Products { get; }
-
-    /// <summary>
-    /// Product types.
-    /// </summary>
-    DbSet<ProductTypeDto> ProductTypes { get; }
+    DbSet<Ranobe> Ranobes { get; }
 
     /// <summary>
     /// Product statuses.
     /// </summary>
-    DbSet<ProductStatusDto> ProductStatuses { get; }
+    DbSet<StatusDto> Statuses { get; }
 }
