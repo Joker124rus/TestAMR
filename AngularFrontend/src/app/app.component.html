@@ -1,24 +1,26 @@
-﻿<h1 id="tableLabel">Weather forecast</h1>
+<h1 id="tableLabel">Ranobes</h1>
 
-<p>This component demonstrates fetching data from the server.</p>
+<p *ngIf="!ranobes"><em>Loading...</em></p>
 
-<p *ngIf="!forecasts"><em>Loading... Please refresh once the ASP.NET backend has started. See <a href="https://aka.ms/jspsintegrationangular">https://aka.ms/jspsintegrationangular</a> for more details.</em></p>
-
-<table *ngIf="forecasts">
-    <thead>
-        <tr>
-            <th>Date</th>
-            <th>Temp. (C)</th>
-            <th>Temp. (F)</th>
-            <th>Summary</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let forecast of forecasts">
-            <td>{{ forecast.date }}</td>
-            <td>{{ forecast.temperatureC }}</td>
-            <td>{{ forecast.temperatureF }}</td>
-            <td>{{ forecast.summary }}</td>
-        </tr>
-    </tbody>
+<table *ngIf="ranobes">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>English name</th>
+      <th>Foreign Name</th>
+      <th>Description</th>
+      <th>Chapters</th>
+      <th>Publish date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let ranobe of ranobes">
+      <td>{{ ranobe.russianName }}</td>
+      <td>{{ ranobe.englishName }}</td>
+      <td>{{ ranobe.foreignName }}</td>
+      <td>{{ ranobe.description }}</td>
+      <td>{{ ranobe.chapters }}</td>
+      <td>{{ ranobe.publishDate }}</td>
+    </tr>
+  </tbody>
 </table>

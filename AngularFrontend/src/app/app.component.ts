@@ -7,20 +7,23 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  public forecasts?: WeatherForecast[];
+  public ranobes?: Ranobe[];
 
   constructor(http: HttpClient) {
-    http.get<WeatherForecast[]>('/weatherforecast').subscribe(result => {
-      this.forecasts = result;
+    http.get<Ranobe[]>('/api/ranobes').subscribe(result => {
+      this.ranobes = result;
     }, error => console.error(error));
   }
 
   title = 'AngularFrontend';
 }
 
-interface WeatherForecast {
-  date: string;
-  temperatureC: number;
-  temperatureF: number;
-  summary: string;
+interface Ranobe {
+  russianName: string;
+  englishName: string;
+  foreignName: string;
+  description: string;
+  chapters: number;
+  publishDate: Date;
+  //status: string;
 }

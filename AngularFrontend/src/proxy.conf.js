@@ -1,7 +1,7 @@
 const PROXY_CONFIG = [
   {
     context: [
-      "/weatherforecast",
+      "/api/ranobes",
     ],
     target: "https://localhost:7129",
     secure: false

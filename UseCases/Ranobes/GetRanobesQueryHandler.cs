@@ -23,6 +23,6 @@ public class GetRanobesQueryHandler : IRequestHandler<GetRanobesQuery, IEnumerab
     /// <inheritdoc />
     public async Task<IEnumerable<Ranobe>> Handle(GetRanobesQuery request, CancellationToken cancellationToken)
     {
-        return db.Ranobes;
+        return await db.Ranobes.ToArrayAsync();
     }
 }

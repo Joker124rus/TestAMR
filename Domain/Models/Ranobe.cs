@@ -40,7 +40,7 @@ public class Ranobe
     /// <summary>
     /// Total count episodes.
     /// </summary>
-    public int? ChaptersCount { get; init; }
+    public int? Chapters { get; init; }
 
     /// <summary>
     /// Date when ranobe is published. This represents date of first chapter. 
