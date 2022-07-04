@@ -1,5 +1,6 @@
 using System.Reflection;
 using Abstractions.DataAccess;
+using ASP.NetWebAPI.MappingProfiles;
 using DataAccess;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
@@ -28,6 +29,8 @@ builder.Services.AddDbContext<ApplicationContext>(options => options.UseSqlServe
 builder.Services.AddTransient<IApplicationContext, ApplicationContext>();
 
 builder.Services.AddMediatR(typeof(GetRanobesQuery).Assembly);
+
+builder.Services.AddAutoMapper(typeof(RanobeMappingProfile).Assembly);
 
 var app = builder.Build();
 

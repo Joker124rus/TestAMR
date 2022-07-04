@@ -1,4 +1,5 @@
-﻿using Domain.Models;
+﻿using Domain.Dtos;
+using Domain.Models;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using UseCases.Ranobes;
@@ -29,7 +30,7 @@ public class RanobeController : ControllerBase
     /// <returns>IEnumerable with ranobes.</returns>
     [HttpGet]
     [Produces("application/json")]
-    public async Task<IEnumerable<Ranobe>> GetRanobesAsync(CancellationToken cancellationToken)
+    public async Task<IEnumerable<RanobeDto>> GetRanobesAsync(CancellationToken cancellationToken)
     {
         return await mediator.Send(new GetRanobesQuery(), cancellationToken);
     }

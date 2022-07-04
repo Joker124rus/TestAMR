@@ -19,11 +19,10 @@ export class AppComponent {
 }
 
 interface Ranobe {
-  russianName: string;
   englishName: string;
   foreignName: string;
   description: string;
   chapters: number;
   publishDate: Date;
-  //status: string;
+  status: string;
 }

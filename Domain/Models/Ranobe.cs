@@ -14,13 +14,6 @@ public class Ranobe
     public int Id { get; init; }
 
     /// <summary>
-    /// Russian name.
-    /// </summary>
-    [Required]
-    [StringLength(300)]
-    public string? RussianName { get; init; }
-
-    /// <summary>
     /// English name.
     /// </summary>
     [StringLength(300)]

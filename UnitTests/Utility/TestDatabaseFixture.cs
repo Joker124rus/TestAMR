@@ -24,13 +24,11 @@ public class TestDatabaseFixture
                     context.Ranobes.AddRange(
                         new Ranobe
                         {
-                            RussianName = "Тетрадь смерти",
                             EnglishName = "Death Note",
                             Status = context.Statuses.First(status => status.Id == Status.OnGoing)
                         },
                         new Ranobe
                         {
-                            RussianName = "Стальной алхимик",
                             EnglishName = "Fullmetal alchemist",
                             Status = context.Statuses.First(status => status.Id == Status.Complete)
                         });

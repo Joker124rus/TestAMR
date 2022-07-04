@@ -5,22 +5,22 @@
 <table *ngIf="ranobes">
   <thead>
     <tr>
-      <th>Name</th>
       <th>English name</th>
       <th>Foreign Name</th>
       <th>Description</th>
       <th>Chapters</th>
       <th>Publish date</th>
+      <th>Status</th>
     </tr>
   </thead>
   <tbody>
     <tr *ngFor="let ranobe of ranobes">
-      <td>{{ ranobe.russianName }}</td>
       <td>{{ ranobe.englishName }}</td>
       <td>{{ ranobe.foreignName }}</td>
       <td>{{ ranobe.description }}</td>
       <td>{{ ranobe.chapters }}</td>
       <td>{{ ranobe.publishDate }}</td>
+      <td>{{ ranobe.status }}</td>
     </tr>
   </tbody>
 </table>
