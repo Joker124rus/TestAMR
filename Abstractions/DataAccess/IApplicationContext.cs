@@ -10,7 +10,7 @@ namespace Abstractions.DataAccess;
 public interface IApplicationContext
 {
     /// <summary>
-    /// Data base set that represents ranobes.
+    /// Ranobes.
     /// </summary>
     DbSet<Ranobe> Ranobes { get; }
 
@@ -18,4 +18,9 @@ public interface IApplicationContext
     /// Product statuses.
     /// </summary>
     DbSet<StatusDto> Statuses { get; }
+
+    /// <summary>
+    /// Ranobe authors.
+    /// </summary>
+    DbSet<Author> Authors { get; }
 }

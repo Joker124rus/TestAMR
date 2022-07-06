@@ -8,7 +8,7 @@ public enum Status
     /// <summary>
     /// Work on ranobe is underway.
     /// </summary>
-    OnGoing = 1,
+    Ongoing = 1,
 
     /// <summary>
     /// Ranobe is completed.

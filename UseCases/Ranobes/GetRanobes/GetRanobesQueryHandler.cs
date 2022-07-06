@@ -1,10 +1,9 @@
 ﻿using Abstractions.DataAccess;
 using AutoMapper;
-using AutoMapper.QueryableExtensions;
 using Domain.Dtos;
 using MediatR;
 
-namespace UseCases.Ranobes;
+namespace UseCases.Ranobes.GetRanobes;
 
 /// <summary>
 /// Get products query handler.

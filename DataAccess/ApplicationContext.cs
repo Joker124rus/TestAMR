@@ -24,6 +24,9 @@ public class ApplicationContext : DbContext, IApplicationContext
     /// <inheritdoc />
     public DbSet<StatusDto> Statuses { get; protected set; }
 
+    /// <inheritdoc />
+    public DbSet<Author> Authors { get; protected set; }
+
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         foreach (var status in Enum.GetValues(typeof(Status)).Cast<Status>())

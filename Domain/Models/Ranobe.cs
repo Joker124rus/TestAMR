@@ -16,6 +16,7 @@ public class Ranobe
     /// <summary>
     /// English name.
     /// </summary>
+    [Required]
     [StringLength(300)]
     public string? EnglishName { get; init; }
 
@@ -33,14 +34,34 @@ public class Ranobe
     /// <summary>
     /// Total count episodes.
     /// </summary>
-    public int? Chapters { get; init; }
+    public int Chapters { get; init; }
 
     /// <summary>
-    /// Date when ranobe is published. This represents date of first chapter. 
+    /// Date when the ranobe was published. This represents date when the first chapter was published. 
     /// </summary>
-    public DateTime? PublishDate { get; init; }
+    public DateTime PublishDate { get; init; }
 
     /// <inheritdoc cref="Models.Status"/>
     [Required]
     public StatusDto? Status { get; init; }
+
+    /// <summary>
+    /// Path to the poster.
+    /// </summary>
+    public string? Poster { get; init; }
+
+    /// <summary>
+    /// Rating by people.
+    /// </summary>
+    public double Rating { get; init; }
+    
+    /// <summary>
+    /// Represents how much people rated this ranobe.
+    /// </summary>
+    public int PeopleRatedCount { get; init; }
+
+    /// <summary>
+    /// Authors.
+    /// </summary>
+    public List<Author>? Authors { get; init; }
 }

@@ -1,0 +1,7 @@
+<h2>Ranobes</h2>
+
+<div *ngFor="let ranobe of ranobes">    
+    <a routerLink="/ranobes/{{ranobe.id}}">
+        <img class="poster" src="assets/img/{{ ranobe.poster }}" />
+    </a>
+</div>

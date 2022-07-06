@@ -1,8 +1,7 @@
 ﻿using Domain.Dtos;
-using Domain.Models;
 using MediatR;
 
-namespace UseCases.Ranobes;
+namespace UseCases.Ranobes.GetRanobes;
 
 /// <summary>
 /// Get products query with specified type.

@@ -5,7 +5,7 @@ using DataAccess;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
-using UseCases.Ranobes;
+using UseCases.Ranobes.GetRanobes;
 
 var builder = WebApplication.CreateBuilder(args);
 

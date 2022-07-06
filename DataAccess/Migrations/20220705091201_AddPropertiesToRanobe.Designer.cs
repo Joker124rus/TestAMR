@@ -4,6 +4,7 @@ using DataAccess;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DataAccess.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    partial class ApplicationContextModelSnapshot : ModelSnapshot
+    [Migration("20220705091201_AddPropertiesToRanobe")]
+    partial class AddPropertiesToRanobe
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -34,7 +36,7 @@ namespace DataAccess.Migrations
 
                     b.HasIndex("RanobesId");
 
-                    b.ToTable("AuthorRanobe", (string)null);
+                    b.ToTable("AuthorRanobe");
                 });
 
             modelBuilder.Entity("Domain.Dtos.StatusDto", b =>
@@ -47,7 +49,7 @@ namespace DataAccess.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Statuses", (string)null);
+                    b.ToTable("Statuses");
 
                     b.HasData(
                         new
@@ -90,7 +92,7 @@ namespace DataAccess.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Authors", (string)null);
+                    b.ToTable("Authors");
                 });
 
             modelBuilder.Entity("Domain.Models.Ranobe", b =>
@@ -135,7 +137,7 @@ namespace DataAccess.Migrations
 
                     b.HasIndex("StatusId");
 
-                    b.ToTable("Ranobes", (string)null);
+                    b.ToTable("Ranobes");
                 });
 
             modelBuilder.Entity("AuthorRanobe", b =>

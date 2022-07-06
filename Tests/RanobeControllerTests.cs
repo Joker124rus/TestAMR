@@ -1,7 +1,7 @@
 using ASP.NetWebAPI.MappingProfiles;
 using AutoMapper;
 using Tests.Utility;
-using UseCases.Ranobes;
+using UseCases.Ranobes.GetRanobes;
 
 namespace Tests;
 

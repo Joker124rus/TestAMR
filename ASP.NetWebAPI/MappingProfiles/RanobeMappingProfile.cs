@@ -15,6 +15,7 @@ public class RanobeMappingProfile : Profile
     public RanobeMappingProfile()
     {
         CreateMap<Ranobe, RanobeDto>()
-            .ForMember(dest => dest.Status, opt => opt.MapFrom(src => src.Status!.Name));
+            .ForMember(dest => dest.Status, opt => opt.MapFrom(src => src.Status!.Name))
+            .ForMember(dest => dest.Authors, opt => opt.MapFrom(src => string.Join(", ", src.Authors.Select(author => author.Name))));
     }
 }

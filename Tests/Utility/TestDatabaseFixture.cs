@@ -25,7 +25,7 @@ public class TestDatabaseFixture
                         new Ranobe
                         {
                             EnglishName = "Death Note",
-                            Status = context.Statuses.First(status => status.Id == Status.OnGoing)
+                            Status = context.Statuses.First(status => status.Id == Status.Ongoing)
                         },
                         new Ranobe
                         {

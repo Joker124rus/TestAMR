@@ -25,4 +25,16 @@ public class RanobeDto
 
     /// <inheritdoc cref="Models.Status"/>
     public string? Status { get; init; }
+
+    /// <inheritdoc cref="Models.Ranobe.Poster"/>
+    public string? Poster { get; init; }
+
+    /// <inheritdoc cref="Models.Ranobe.Rating"/>
+    public double Rating { get; init; }
+
+    /// <inheritdoc cref="Models.Ranobe.PeopleRatedCount"/>
+    public int PeopleRatedCount { get; init; }
+
+    /// <inheritdoc cref="Models.Ranobe.Authors"/>
+    public string? Authors { get; init; }
 }
