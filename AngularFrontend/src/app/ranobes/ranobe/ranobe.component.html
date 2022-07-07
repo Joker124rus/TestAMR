@@ -1,7 +1,7 @@
 <h2>Ranobe</h2>
 <div *ngIf="ranobe">
     <img class="poster" src="assets/img/{{ ranobe.poster }}" />
-    <p>Name: {{ ranobe.englishName }}</p>
+    <p>Name: {{ ranobe.name }}</p>
     <p>Original name: {{ ranobe.foreignName }}</p>
     <p>Description: {{ ranobe.description }}</p>
     <p>Chapters: {{ ranobe.chapters }}</p>
@@ -9,5 +9,6 @@
     <p>Status: {{ ranobe.status }}</p>
     <p>Rating: {{ ranobe.rating }}</p>
     <p>People rated: {{ ranobe.peopleRatedCount }}</p>
+    <p>Rating summary: {{ ranobe.rating / ranobe.peopleRatedCount }}</p>
     <p>Authors: {{ ranobe.authors}}</p>
 </div>

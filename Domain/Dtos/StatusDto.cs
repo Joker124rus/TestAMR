@@ -5,7 +5,7 @@ namespace Domain.Dtos;
 /// <summary>
 /// Status DTO.
 /// </summary>
-public class StatusDto
+public record StatusDto
 {
     /// <summary>
     /// Identifier.

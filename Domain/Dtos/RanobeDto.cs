@@ -3,7 +3,7 @@
 /// <summary>
 /// Ranobe DTO.
 /// </summary>
-public class RanobeDto
+public record RanobeDto
 {
     /// <inheritdoc cref="Models.Ranobe.Id"/>
     public int Id { get; init; }

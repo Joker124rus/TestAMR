@@ -2,7 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 import { Ranobe } from '../shared/ranobe.model';
-import { RanobeService } from '../shared/ranobe.service';
+import { RanobeService } from '../../shared/ranobe.service';
 
 @Component({
   selector: 'app-ranobe',

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { RanobeService } from './shared/ranobe.service'
+import { RanobeService } from '../shared/ranobe.service'
 import { Ranobe } from './shared/ranobe.model'
 
 @Component({

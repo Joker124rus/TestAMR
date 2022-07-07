@@ -1,0 +1,54 @@
+<div>
+    <h1>Create Ranobe</h1>
+    <form method="post" (ngSubmit)="onSubmit()" #ranobeForm="ngForm">
+        {{ ranobe | json }}
+        <p>
+            <label for="name">Name</label>
+            <input class="form-control" type="text" id="name" name="name"
+             required
+             [(ngModel)]="ranobe.name"
+             #name="ngModel">
+        </p>
+        <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+            Name is required
+        </div>
+        <p>
+            <label for="foreignName">Foreign name</label>
+            <input class="form-control" type="text" id="foreignName" name="foreignName"
+            [(ngModel)]="ranobe.foreignName">
+        </p>
+        <p>
+            <label for="description">Description</label>
+            <textarea class="form-control" id="description" name="description"
+            [(ngModel)]="ranobe.description"></textarea>
+        </p>
+        <p>
+            <label for="chapters">Total chapters</label>
+            <input class="form-control" type="number" id="chapters" name="chapters"
+            [(ngModel)]="ranobe.chapters">
+        </p>
+        <p>
+            <label for="publishDate">Publish date</label>
+            <input class="form-control" type="date" id="publishDate" name="publishDate"
+            [(ngModel)]="ranobe.publishDate">
+        </p>
+        <p>
+            <label for="status">Status</label>
+            <select class="form-control" id="status" name="status"
+             required
+             [(ngModel)]="ranobe.status"
+             #status="ngModel">
+                <option *ngFor="let status of statuses" [value]="status">
+                    {{ status }}
+                </option>
+            </select>
+        </p>
+        <p>
+            <label for="poster">Poster file name</label>
+            <input class="form-control" type="text" id="poster" name="poster"
+            [(ngModel)]="ranobe.poster">
+        </p>
+        <button type="button" class="btn btn-default" (click)="clear(); ranobeForm.reset()">Clear</button>
+        <button type="submit" class="btn btn-success" [disabled]="!ranobeForm.form.valid">Submit</button>
+    </form>
+</div>

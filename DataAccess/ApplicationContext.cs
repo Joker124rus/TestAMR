@@ -27,6 +27,12 @@ public class ApplicationContext : DbContext, IApplicationContext
     /// <inheritdoc />
     public DbSet<Author> Authors { get; protected set; }
 
+    /// <inheritdoc />
+    public new async Task<int> SaveChangesAsync(CancellationToken cancellationToken)
+    {
+        return await base.SaveChangesAsync(cancellationToken);
+    }
+
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         foreach (var status in Enum.GetValues(typeof(Status)).Cast<Status>())

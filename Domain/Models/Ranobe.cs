@@ -18,7 +18,7 @@ public class Ranobe
     /// </summary>
     [Required]
     [StringLength(300)]
-    public string? EnglishName { get; init; }
+    public string? Name { get; init; }
 
     /// <summary>
     /// Official foreign name.

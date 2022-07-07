@@ -6,17 +6,23 @@ import { AppRoutingModule } from './app-routing/app-routing.module';
 import { AppComponent } from './app.component';
 import { RanobeComponent } from './ranobes/ranobe/ranobe.component';
 import { RanobesComponent } from './ranobes/ranobes.component';
+import { AdminComponent } from './admin/admin.component';
+import { CreateRanobeComponent } from './admin/create-ranobe/create-ranobe.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     RanobeComponent,
-    RanobesComponent
+    RanobesComponent,
+    AdminComponent,
+    CreateRanobeComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

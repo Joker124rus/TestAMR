@@ -23,4 +23,10 @@ public interface IApplicationContext
     /// Ranobe authors.
     /// </summary>
     DbSet<Author> Authors { get; }
+
+    /// <summary>
+    /// Save pending changes
+    /// </summary>
+    /// <param name="cancellationToken">Token to cancel the operation.</param>
+    Task<int> SaveChangesAsync(CancellationToken cancellationToken);
 }
