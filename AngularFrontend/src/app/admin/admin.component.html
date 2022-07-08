@@ -1,1 +1,7 @@
 <h2>ADMIN PANEL</h2>
+
+<div *ngFor="let ranobe of ranobes">
+    <p *ngIf="ranobe">Name: {{ ranobe.name }}</p>
+</div>
+<button (click)="showCreateForm()">Create</button>
+<app-create-ranobe (ranobeCreated)="createRanobe($event)" [hidden]="!isCreating"></app-create-ranobe>

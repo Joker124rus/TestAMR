@@ -1,4 +1,5 @@
 ﻿using Abstractions.DataAccess;
+using Domain.Models;
 using MediatR;
 
 namespace UseCases.Admin.CreateRanobe;
@@ -21,7 +22,20 @@ internal class CreateRanobeCommandHandler : AsyncRequestHandler<CreateRanobeComm
     /// <inheritdoc />
     protected override async Task Handle(CreateRanobeCommand request, CancellationToken cancellationToken)
     {
-        db.Ranobes.Add(request.Ranobe);
+        var ranobeDto = request.RanobeDto;
+
+        var ranobe = new Ranobe
+        {
+            Name = ranobeDto.Name,
+            ForeignName = ranobeDto.ForeignName,
+            Description = ranobeDto.Description,
+            Chapters = ranobeDto.Chapters,
+            PublishDate = ranobeDto.PublishDate,
+            Status = db.Statuses.First(status => status.Name!.Equals(ranobeDto.Status)),
+            Poster = ranobeDto.Poster
+        };
+
+        db.Ranobes.Add(ranobe);
         await db.SaveChangesAsync(cancellationToken);
     }
 }

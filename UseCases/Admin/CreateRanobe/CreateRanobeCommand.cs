@@ -1,4 +1,5 @@
-﻿using Domain.Models;
+﻿using Domain.Dtos;
+using Domain.Models;
 using MediatR;
 
 namespace UseCases.Admin.CreateRanobe;
@@ -6,4 +7,4 @@ namespace UseCases.Admin.CreateRanobe;
 /// <summary>
 /// Create ranobe command.
 /// </summary>
-public record CreateRanobeCommand(Ranobe Ranobe) : IRequest;
+public record CreateRanobeCommand(RanobeDto RanobeDto) : IRequest;

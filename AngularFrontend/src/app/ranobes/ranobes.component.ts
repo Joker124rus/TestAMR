@@ -10,15 +10,15 @@ import { Ranobe } from './shared/ranobe.model'
 })
 export class RanobesComponent implements OnInit {
 
-  ranobes: Ranobe[] = [];
+  public ranobes: Ranobe[] = [];
 
   constructor(private ranobeService: RanobeService) { }
 
   ngOnInit(): void {
-    this.getRanobes();
+    this.loadRanobes();
   }
 
-  getRanobes(): void {
+  loadRanobes(): void {
     this.ranobeService.getRanobes()
       .subscribe(ranobes => this.ranobes = ranobes);
   }

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { RanobesComponent } from 'src/app/ranobes/ranobes.component';
 import { Ranobe } from 'src/app/ranobes/shared/ranobe.model';
 
 import { RanobeService } from 'src/app/shared/ranobe.service';
@@ -20,6 +21,8 @@ export class CreateRanobeComponent implements OnInit {
 
   ranobe!: Ranobe;
 
+  @Output() ranobeCreated = new EventEmitter<Ranobe>();
+
   constructor(
     private ranobeService: RanobeService,
 
@@ -30,7 +33,7 @@ export class CreateRanobeComponent implements OnInit {
   }
 
   onSubmit() {
-    this.ranobeService.createRanobe(this.ranobe);
+    this.ranobeCreated.emit(this.ranobe);
    }
 
   clear() {

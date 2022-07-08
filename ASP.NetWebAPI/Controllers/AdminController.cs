@@ -1,7 +1,9 @@
-﻿using Domain.Models;
+﻿using Domain.Dtos;
+using Domain.Models;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using UseCases.Admin.CreateRanobe;
+using UseCases.Ranobes.GetRanobes;
 
 namespace ASP.NetWebAPI.Controllers;
 
@@ -12,6 +14,8 @@ namespace ASP.NetWebAPI.Controllers;
 [ApiController]
 public class AdminController : Controller
 {
+    private const string JsonHeader = "application/json";
+
     private readonly IMediator mediator;
 
     /// <summary>
@@ -23,13 +27,25 @@ public class AdminController : Controller
     }
 
     /// <summary>
-    /// Create
+    /// Get all ranobes.
     /// </summary>
-    /// <param name="ranobe"></param>
+    /// <returns>IEnumerable with ranobes.</returns>
+    [HttpGet]
+    [Produces(JsonHeader)]
+    public async Task<IEnumerable<RanobeDto>> GetRanobesAsync(CancellationToken cancellationToken)
+    {
+        return await mediator.Send(new GetRanobesQuery(), cancellationToken);
+    }
+
+
+    /// <summary>
+    /// Create ranobe.
+    /// </summary>
+    /// <param name="ranobeDto">Ranobe to create.</param>
     /// <param name="cancellationToken">Token to cancel the operation.</param>
     [HttpPost]
-    public async void CreateRanobeAsync(Ranobe ranobe, CancellationToken cancellationToken)
+    public async Task CreateRanobeAsync(RanobeDto ranobeDto, CancellationToken cancellationToken)
     {
-        await mediator.Send(new CreateRanobeCommand(ranobe), cancellationToken);
+        await mediator.Send(new CreateRanobeCommand(ranobeDto), cancellationToken);
     }
 }
