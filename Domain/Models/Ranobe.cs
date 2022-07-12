@@ -45,6 +45,8 @@ public class Ranobe
     [Required]
     public StatusDto? Status { get; init; }
 
+    public Status StatusId { get; init; }
+
     /// <summary>
     /// Path to the poster.
     /// </summary>
